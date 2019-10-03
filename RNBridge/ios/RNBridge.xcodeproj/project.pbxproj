@@ -16,6 +16,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RNBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNBridgeTests.m */; };
+		428DA06D2345868A006F8B9E /* Bulb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DA06C2345868A006F8B9E /* Bulb.swift */; };
+		428DA06F234586A9006F8B9E /* Bulb.m in Sources */ = {isa = PBXBuildFile; fileRef = 428DA06E234586A9006F8B9E /* Bulb.m */; };
 		A4C6AC188D8E3803F960226A /* libPods-RNBridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 698F0B19A1825A2918A40F5C /* libPods-RNBridgeTests.a */; };
 		B3F52675262821C059B61861 /* libPods-RNBridge-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2FC742642C42054FDD9EC3F /* libPods-RNBridge-tvOSTests.a */; };
 		CF32269DFA0C9BAC006A8FCC /* libPods-RNBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 405D7ED2D5607CF73F76F525 /* libPods-RNBridge.a */; };
@@ -54,6 +56,9 @@
 		2D02E47B1E0B4A5D006451C7 /* RNBridge-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNBridge-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNBridge-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNBridge-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		405D7ED2D5607CF73F76F525 /* libPods-RNBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBridge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		428DA06B23458689006F8B9E /* RNBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		428DA06C2345868A006F8B9E /* Bulb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulb.swift; sourceTree = "<group>"; };
+		428DA06E234586A9006F8B9E /* Bulb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bulb.m; sourceTree = "<group>"; };
 		56127B1D1F035DBD3F8D1461 /* libPods-RNBridge-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBridge-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		698F0B19A1825A2918A40F5C /* libPods-RNBridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7CA8931E4289A6C21CC6CB /* Pods-RNBridge-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBridge-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNBridge-tvOSTests/Pods-RNBridge-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +137,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				428DA06E234586A9006F8B9E /* Bulb.m */,
+				428DA06C2345868A006F8B9E /* Bulb.swift */,
+				428DA06B23458689006F8B9E /* RNBridge-Bridging-Header.h */,
 			);
 			name = RNBridge;
 			sourceTree = "<group>";
@@ -148,7 +156,6 @@
 				CC6560ED4B18D6E6DBA46777 /* Pods-RNBridgeTests.debug.xcconfig */,
 				DB3921889C7584001A02C4B1 /* Pods-RNBridgeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +299,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1100;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +318,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,7 +539,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428DA06D2345868A006F8B9E /* Bulb.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				428DA06F234586A9006F8B9E /* Bulb.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC6560ED4B18D6E6DBA46777 /* Pods-RNBridgeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB3921889C7584001A02C4B1 /* Pods-RNBridgeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNBridgeTests/Info.plist;
@@ -626,6 +641,7 @@
 			baseConfigurationReference = BD1814CB1A4B403CD3496CD0 /* Pods-RNBridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = RNBridge/Info.plist;
@@ -637,6 +653,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNBridge;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +665,7 @@
 			baseConfigurationReference = E6BE3132729F55C63A5F7F9A /* Pods-RNBridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = RNBridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +676,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNBridge;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBridge-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
