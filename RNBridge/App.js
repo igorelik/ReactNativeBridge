@@ -13,7 +13,9 @@ import {
   ScrollView,
   View,
   Text,
+  Button,
   StatusBar,
+  NativeModules
 } from 'react-native';
 
 import {
@@ -24,7 +26,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+
+
 const App: () => React$Node = () => {
+  const nm = NativeModules;
+  //const native = React.useRef(NativeModules);
+  onButtonPressed = () => {
+    nm.Bulb.getBulbDescription((error, str)=>{alert(str)});
+    }
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -38,6 +47,12 @@ const App: () => React$Node = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
+          <Text>BULB </Text>
+          <Button
+            onPress={onButtonPressed}
+            title="Press ME "
+            color="#FF6347"
+          />
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
